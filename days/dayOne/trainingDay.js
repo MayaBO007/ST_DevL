@@ -154,8 +154,6 @@ async function trainingDay() {
                     platform.saveSession(responsesTrainingData, false);
                     clearInterval(sessionIntervalTrainingDay);
                     reset_airplane();
-                    reset_redCar();
-                    reset_blueCar();
                     document.getElementById("blueButton").style.display = "none";
                     document.getElementById("redButton").style.display = "none";
                     resolve("done");
