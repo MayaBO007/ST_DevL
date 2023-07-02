@@ -18,6 +18,7 @@ async function start2tests() {
             let startIntervalTest = async function () {
                 let startBeforeStar = await startInterval2Tests();
                 if (startBeforeStar == "done1") {
+                    clearInterval(sessionInterval2Test);
                     reset_blueCar();
                     reset_redCar();
                     setTimeout(() => {
@@ -39,6 +40,7 @@ async function start2tests() {
                             showStars();
                             let endStar = await startIntervalStar();
                             if (endStar == "done2") {
+                                clearInterval(sessionIntervalStar);
                                 reset_blueCar();
                                 reset_redCar();
                                 document.getElementById("redButton").style.display = "none";
@@ -63,6 +65,7 @@ async function start2tests() {
                                         if (afterStar == "done3") {
                                             // document.getElementById("blueButton").style.display = "none";
                                             // document.getElementById("redButton").style.display = "none";
+                                            clearInterval(sessionInterval2Test2);
                                             reset_blueCar();
                                             reset_redCar();
                                             document.getElementById("redButton").style.display = "none";
